@@ -17,9 +17,9 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
  * @author josimar
  */
 public class HibernateConfiguration {
-    public static final String userName = "root";
-    public static final String password = "99699939";
-    public static final String dataBase = "eqdc";
+    public static final String userName = "aluno";
+    public static final String password = "aluno";
+    public static final String dataBase = "aluno";
     
     // configuracões somente uma vez 
     // build  valida somente uma vez

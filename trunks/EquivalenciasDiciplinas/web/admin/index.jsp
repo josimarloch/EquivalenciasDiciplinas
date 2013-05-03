@@ -51,7 +51,7 @@
         <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
     </head>
 
-    <body onload="abrirPag()">
+    <body >
         <c:if test=""></c:if>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -84,6 +84,7 @@
                         <ul class="nav nav-list">
                             <li class="nav-header">Menu</li>
                             <li class="active"><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
+                            <li ><a href="#" onclick="abrirPag('cadastra_curso.jsp')">Cadastro de Curso</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
