@@ -29,7 +29,7 @@
             <div class="control-group">
                 <label class="control-label" for="Descricao">Descrição</label>
                 <div class="controls">
-                    <textarea rows="3" id="Descricao" name="descricao" placeholder="Descrição do Curso"></textarea>
+                    <textarea rows="5" id="Descricao" name="descricao" placeholder="Descrição do Curso"></textarea>
                 </div>
             </div>
 
