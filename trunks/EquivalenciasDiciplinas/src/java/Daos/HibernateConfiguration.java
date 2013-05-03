@@ -23,6 +23,7 @@ public class HibernateConfiguration {
     
     // configuracões somente uma vez 
     // build  valida somente uma vez
+    // build  valida somente uma vez
     // Session uma sessão para cada transação ou um conjunto de transações
 
     private static AnnotationConfiguration cfg = null;
