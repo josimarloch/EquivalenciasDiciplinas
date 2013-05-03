@@ -23,6 +23,7 @@ public class Curso implements Serializable {
     private String codigo;
     private String nome;
     
+    
 
     public Long getId() {
         return id;
