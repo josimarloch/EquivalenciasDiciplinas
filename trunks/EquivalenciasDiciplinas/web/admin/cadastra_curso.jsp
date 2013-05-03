@@ -27,13 +27,6 @@
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="Descricao">Descrição</label>
-                <div class="controls">
-                    <textarea rows="5" id="Descricao" name="descricao" placeholder="Descrição do Curso"></textarea>
-                </div>
-            </div>
-
-            <div class="control-group">
                 <div class="controls">
                     <input type="hidden" name="ok" value="cadastra_curso"/>
                     <button type="submit" class="btn">Cadastrar</button>
