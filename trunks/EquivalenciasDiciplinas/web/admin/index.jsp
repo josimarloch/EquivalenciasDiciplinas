@@ -52,6 +52,7 @@
     </head>
 
     <body onload="abrirPag()">
+        <c:if test=""></c:if>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
