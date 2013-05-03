@@ -19,11 +19,13 @@ public class Disciplina implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
-    @ManyToOne
-    private Professor professor;
+//    @ManyToOne
+//    private Professor professor;
     private String ementa;
     @ManyToOne
     private Curso curso;
+    @ManyToOne
+    private Professor professor;
     
 
     public Professor getProfessor() {

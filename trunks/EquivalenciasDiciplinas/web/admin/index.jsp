@@ -15,6 +15,8 @@
 
         <!-- Le styles -->
         <link href="../css/bootstrap.css" rel="stylesheet">
+         <script language="javascript" src="js/ajax.js"></script>  
+        <script language="javascript" src="js/instrucao.js"></script>
         <style type="text/css">
             body {
                 padding-top: 60px;
@@ -80,7 +82,7 @@
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
                             <li class="nav-header">Menu</li>
-                            <li class="active"><a href="#">Link</a></li>
+                            <li class="active"><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>

@@ -35,6 +35,8 @@
         </style>
         <link href="css/bootstrap.css" rel="stylesheet">
         <link href="css/principal.css" rel="stylesheet">
+            <script language="javascript" src="js/ajax.js"></script>  
+        <script language="javascript" src="js/instrucao.js"></script>
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>

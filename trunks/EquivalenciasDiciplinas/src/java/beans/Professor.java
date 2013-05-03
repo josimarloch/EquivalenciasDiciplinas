@@ -24,6 +24,8 @@ public class Professor implements Serializable {
     private Long id;
     String nome;
     String email;
+    @OneToMany(mappedBy = "professor")
+    List<Disciplina>disciplinas;
    
 
     public Professor() {
@@ -83,4 +85,9 @@ public class Professor implements Serializable {
     public String toString() {
         return "beans.Professor[ id=" + id + " ]";
     }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+    
 }
