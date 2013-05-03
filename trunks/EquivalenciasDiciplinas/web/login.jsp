@@ -31,12 +31,12 @@
         <link href="css/bootstrap.css" rel="stylesheet">
     </head>
     <body>
-        <form class="form-horizontal">
+        <form class="form-horizontal" action="LoginManager" method="post">
             <h3>Login</h3>
             <div class="control-group">
-                <label class="control-label" for="inputEmail">Email</label>
+                <label class="control-label" for="inputEmail">Login</label>
                 <div class="controls">
-                    <input type="text" id="inputEmail" placeholder="Email">
+                    <input type="text" name="login" id="inputEmail" placeholder="Email">
                 </div>
             </div>
             <div class="control-group">
@@ -47,7 +47,7 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-
+                    <input type="hidden" value="login" name="ok"/>
                     <button type="submit" class="btn">Sign in</button>
                 </div>
             </div>

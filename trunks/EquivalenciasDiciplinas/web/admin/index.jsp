@@ -14,7 +14,7 @@
         <meta name="author" content="">
 
         <!-- Le styles -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
         <style type="text/css">
             body {
                 padding-top: 60px;
@@ -33,8 +33,8 @@
                 }
             }
         </style>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/principal.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/principal.css" rel="stylesheet">
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -49,8 +49,7 @@
         <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
     </head>
 
-    <body onload="abrirPag('login.jsp')"> <c:if test="${aluno.login==null}"><script>abrirPag('login.jsp')</script></c:if>
-
+    <body onload="abrirPag('login.jsp')">
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
@@ -60,94 +59,43 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="#">Equivalência de Disciplinas</a>
+                    <a class="brand" href="#">Equivalência de Disciplinas/Admin</a>
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right">
-                            Logged in as <a href="#" class="navbar-link">   <c:if test="${aluno.login!=null}"><c:out value="${aluno.login}"/><a href="LoginManager?ok=logout"> Logout</a> </c:if>
-                            </p>
-                            <ul class="nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div><!--/.nav-collapse -->
-                    </div>
+                            Logged in as <a href="#" class="navbar-link">Username</a>
+                        </p>
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
                 </div>
             </div>
+        </div>
 
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="span3">
-                        <div class="well sidebar-nav">
-                        <c:if test="${aluno.login!=null}">
-                            <ul class="nav nav-list">
-                                <li class="nav-header">Menu</li>
-                                <li class="active"><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li class="nav-header">Sidebar</li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li class="nav-header">Sidebar</li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                            </ul>
-                        </c:if>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span3">
+                    <div class="well sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Menu</li>
+                            <li class="active"><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li class="nav-header">Sidebar</li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li class="nav-header">Sidebar</li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
                     </div><!--/.well -->
                 </div><!--/span-->
                 <div class="span9" id="conteudo"><!--
