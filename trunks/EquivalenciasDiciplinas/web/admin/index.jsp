@@ -51,7 +51,7 @@
         <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
     </head>
 
-    <body onload="abrirPag('login.jsp')">
+    <body onload="abrirPag()">
 
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
