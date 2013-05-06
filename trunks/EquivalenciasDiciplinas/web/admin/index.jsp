@@ -15,7 +15,7 @@
 
         <!-- Le styles -->
         <link href="../css/bootstrap.css" rel="stylesheet">
-         <script language="javascript" src="js/ajax.js"></script>  
+        <script language="javascript" src="js/ajax.js"></script>  
         <script language="javascript" src="js/instrucao.js"></script>
         <style type="text/css">
             body {
@@ -49,6 +49,21 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="http://twitter.github.io/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
         <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
+        <script> 
+            function ChangeClass(objAttrib,NameClass)
+            {
+                //Tratamento para FF
+                if ((!document.all)&&(document.getElementById))
+                {
+                    objAttrib.setAttribute("class",NameClass);
+                }
+                //Tratamento para I.E
+                if ((document.all)&&(document.getElementById))
+                {
+                    objAttrib.setAttribute("className",NameClass);
+                }
+            }
+        </script>
     </head>
 
     <body >
@@ -85,8 +100,8 @@
                             <li class="nav-header">Menu</li>
                             <li class="active"><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
                             <li ><a href="#" onclick="abrirPag('cadastra_curso.jsp')">Cadastro de Curso</a></li>
-                            <li ><a href="#" onclick="abrirPag('cadastra_disciplina.jsp')">Cadastro de Disciplina</a></li>
-                            <li><a href="#">Link</a></li>
+                            <li id="test2" ><a href="#"  onmousedown="ChangeClass(document.getElementById('test2'),'active');" onclick="abrirPag('cadastra_disciplina.jsp')">Cadastro de Disciplina</a></li>
+                            <li id="test"><a href="#" onclick="ChangeClass(document.getElementById('test'),'active');" onblur="">Link</a></li>
                             <li class="nav-header">Sidebar</li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
