@@ -11,9 +11,9 @@ import java.util.List;
  *
  * @author josimar
  */
-public class DiciplinaDao extends DaoGenerics<Disciplina> {
+public class DisciplinaDao extends DaoGenerics<Disciplina> {
 
-    public DiciplinaDao() {
+    public DisciplinaDao() {
         clazz = Disciplina.class;
     }
     public void persisteList(List<Disciplina>diciplinas){

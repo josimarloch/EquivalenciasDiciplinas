@@ -1,5 +1,5 @@
 
-import Daos.DiciplinaDao;
+import Daos.DisciplinaDao;
 import beans.Disciplina;
 
 /*
@@ -17,7 +17,7 @@ public class teste implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 25000; i++) {
-            new DiciplinaDao().persistir(new Disciplina("xxx"));
+            new DisciplinaDao().persistir(new Disciplina("xxx"));
             System.out.println("terminou");
 
         }

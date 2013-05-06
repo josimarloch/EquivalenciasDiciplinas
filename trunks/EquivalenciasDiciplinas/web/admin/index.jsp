@@ -85,8 +85,7 @@
                             <li class="nav-header">Menu</li>
                             <li class="active"><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
                             <li ><a href="#" onclick="abrirPag('cadastra_curso.jsp')">Cadastro de Curso</a></li>
-                            <li><a href="#">Link</a></li>
-                            <li><a href="#">Link</a></li>
+                            <li ><a href="#" onclick="abrirPag('cadastra_disciplina.jsp')">Cadastro de Disciplina</a></li>
                             <li><a href="#">Link</a></li>
                             <li class="nav-header">Sidebar</li>
                             <li><a href="#">Link</a></li>

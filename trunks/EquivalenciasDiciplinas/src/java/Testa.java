@@ -1,5 +1,5 @@
 
-import Daos.DiciplinaDao;
+import Daos.DisciplinaDao;
 import Daos.ProfessorDao;
 import beans.Disciplina;
 import beans.Professor;
@@ -26,9 +26,9 @@ public class Testa {
                 Disciplina d2 = new Disciplina("testeeee222", p2);
                
                 new ProfessorDao().persistir(p1);
-                new DiciplinaDao().persistir(d);
-                new DiciplinaDao().persistir(d2);
-        List<Disciplina> listar = new DiciplinaDao().listar();
+                new DisciplinaDao().persistir(d);
+                new DisciplinaDao().persistir(d2);
+        List<Disciplina> listar = new DisciplinaDao().listar();
         
         System.out.println(listar);
     }

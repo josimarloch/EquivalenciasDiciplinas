@@ -4,7 +4,9 @@
  */
 package servlets;
 
+import Daos.CursoDao;
 import Daos.ProfessorDao;
+import beans.Curso;
 import beans.Professor;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -90,7 +92,13 @@ public class PersistenceManager extends HttpServlet {
                     new ProfessorDao().persistir(new Professor(nome, email));
                     response.sendRedirect("index.jsp");
                 }
-                
+            }else
+            if(ok.equals("cadastra_curso")){
+                String nome = request.getParameter("nome").trim();
+                if(!nome.equals("")){
+                   new CursoDao().persistir(new Curso(nome));
+                    response.sendRedirect("index.jsp");
+                }
             }
         }
     }

@@ -4,7 +4,7 @@
  */
 package beans;
 
-import Daos.DiciplinaDao;
+import Daos.DisciplinaDao;
 import Daos.ProfessorDao;
 import java.io.Serializable;
 import java.util.ArrayList;
