@@ -51,7 +51,7 @@
         <link rel="shortcut icon" href="http://twitter.github.io/bootstrap/assets/ico/favicon.png">
     </head>
 
-    <body onload="abrirPag('login.jsp')"> <c:if test="${aluno.login==null}"><script>abrirPag('login.jsp')</script></c:if>
+    <body onload="abrirPag('login.jsp')"> <c:if test="${aluno==null}"><script>abrirPag('login.jsp')</script></c:if>
 
 
         <div class="navbar navbar-inverse navbar-fixed-top">
@@ -65,7 +65,7 @@
                     <a class="brand" href="#">Equivalência de Disciplinas</a>
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right">
-                            Logged in as <a href="#" class="navbar-link">   <c:if test="${aluno.login!=null}"><c:out value="${aluno.login}"/><a href="LoginManager?ok=logout" > Logout</a> </c:if>
+                            Logged in as <a href="#" class="navbar-link">   <c:if test="${aluno!=null}"><c:out value="${aluno.ra}"/><a href="LoginManager?ok=logout"> Logout</a> </c:if>
                             </p>
                             <ul class="nav">
                                 <li class="active"><a href="#">Home</a></li>
@@ -81,10 +81,10 @@
                 <div class="row-fluid">
                     <div class="span3">
                         <div class="well sidebar-nav">
-                        <c:if test="${aluno.login!=null}">
+                        <c:if test="${aluno!=null}">
                             <ul class="nav nav-list">
                                 <li class="nav-header">Menu</li>
-                                <li class="active"><a href="#">Link</a></li>
+                                  <li ><a href="#" onclick="abrirPag('lista_cursos.jsp')">Pedir Equivalencia</a></li>
                                 <li><a href="#">Link</a></li>
                                 <li><a href="#">Link</a></li>
                                 <li><a href="#">Link</a></li>

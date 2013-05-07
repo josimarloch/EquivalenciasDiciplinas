@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Daos;
+package beans;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
@@ -20,8 +20,13 @@ public class Aluno implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String login;
+    private String ra;
     private String senha;
+
+    public Aluno(String ra, String senha) {
+        this.ra = ra;
+        this.senha = senha;
+    }
 
     public Long getId() {
         return id;
@@ -34,10 +39,15 @@ public class Aluno implements Serializable {
     public Aluno() {
     }
 
-    public Aluno(String login, String senha) {
-        this.login = login;
-        this.senha = senha;
+    public String getRa() {
+        return ra;
     }
+
+    public void setRa(String ra) {
+        this.ra = ra;
+    }
+    
+
 
     @Override
     public int hashCode() {
@@ -64,13 +74,6 @@ public class Aluno implements Serializable {
         return "Daos.Aluno[ id=" + id + " ]";
     }
 
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
 
     public String getSenha() {
         return senha;
@@ -78,6 +81,14 @@ public class Aluno implements Serializable {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getRA() {
+        return ra;
+    }
+
+    public void setRA(String RA) {
+        this.ra = RA;
     }
     
     

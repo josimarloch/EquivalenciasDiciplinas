@@ -17,20 +17,21 @@ import java.util.List;
  */
 public class Testa {
     public static void main(String[] args) {
-                Professor p1 = new Professor("professor 20", "Teste@teste.teste");
-                new ProfessorDao().persistir(p1);
-                //p1.setDiciplinas(listar);
-                Professor p2 = new Professor("professor 50", "Teste@teste.teste");
-                new ProfessorDao().persistir(p2);
-                Disciplina d = new Disciplina("testeeee", p2);
-                Disciplina d2 = new Disciplina("testeeee222", p2);
-               
-                new ProfessorDao().persistir(p1);
-                new DisciplinaDao().persistir(d);
-                new DisciplinaDao().persistir(d2);
-        List<Disciplina> listar = new DisciplinaDao().listar();
-        
-        System.out.println(listar);
+//                Professor p1 = new Professor("professor 20", "Teste@teste.teste");
+//                new ProfessorDao().persistir(p1);
+//                //p1.setDiciplinas(listar);
+//                Professor p2 = new Professor("professor 50", "Teste@teste.teste");
+//                new ProfessorDao().persistir(p2);
+//                Disciplina d = new Disciplina("testeeee", p2);
+//                Disciplina d2 = new Disciplina("testeeee222", p2);
+//               
+//                new ProfessorDao().persistir(p1);
+//                new DisciplinaDao().persistir(d);
+//                new DisciplinaDao().persistir(d2);
+//        List<Disciplina> listar = new DisciplinaDao().listar();
+//        
+//        System.out.println(listar);
+        new DisciplinaDao().getPorIDCurso("1");
     }
     
 }

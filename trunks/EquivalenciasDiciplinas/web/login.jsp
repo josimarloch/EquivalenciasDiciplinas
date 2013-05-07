@@ -36,13 +36,13 @@
             <div class="control-group">
                 <label class="control-label" for="inputEmail">Login</label>
                 <div class="controls">
-                    <input type="text" name="login" id="inputEmail" placeholder="Email">
+                    <input type="text" name="login" id="inputEmail" placeholder="Email ou RA">
                 </div>
             </div>
             <div class="control-group">
                     <label class="control-label" for="inputPassword">Password</label>
                     <div class="controls">
-                    <input type="password" id="inputPassword" placeholder="Password">
+                        <input type="password" id="inputPassword" placeholder="Password" name="senha">
                 </div>
             </div>
             <div class="control-group">

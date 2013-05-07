@@ -4,7 +4,8 @@
  */
 package servlets;
 
-import Daos.Aluno;
+import Daos.AlunoDao;
+import beans.Aluno;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -39,13 +40,13 @@ public class LoginManager extends HttpServlet {
              */
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginManager</title>");            
+            out.println("<title>Servlet LoginManager</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginManager at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } finally {            
+        } finally {
             out.close();
         }
     }
@@ -63,12 +64,12 @@ public class LoginManager extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-            String ok = request.getParameter("ok");
-            if(ok.equals("logout")){
-                request.getSession().removeAttribute("aluno");
-            }
-            response.sendRedirect("index.jsp");
+        // processRequest(request, response);
+        String ok = request.getParameter("ok");
+        if (ok.equals("logout")) {
+            request.getSession().removeAttribute("aluno");
+        }
+        response.sendRedirect("index.jsp");
     }
 
     /**
@@ -83,13 +84,21 @@ public class LoginManager extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
+        // processRequest(request, response);
         String ok = request.getParameter("ok");
-        if(ok.equals("login")){
-            
-        String login = request.getParameter("login");
-        HttpSession session = request.getSession();
-        session.setAttribute("aluno", new Aluno(login, ok));
+        if (ok.equals("login")) {
+            String login = request.getParameter("login").trim();
+            String senha = request.getParameter("senha").trim();
+            if (login.contains("@")) {
+            } else if (login.substring(0, 1).equals("a")) {
+                HttpSession session = request.getSession();
+                Aluno aluno = new Aluno(login, senha);
+                session.setAttribute("aluno", aluno);
+                AlunoDao ad = new AlunoDao();
+              //(!ad.alunoExiste(login)) {
+                    ad.persistir(aluno);
+              //  }
+            }
         }
         response.sendRedirect("index.jsp");
     }

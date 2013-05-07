@@ -46,6 +46,7 @@ public class HibernateConfiguration {
             cfg.addAnnotatedClass(Requisicao.class); // classes para serem mapeadas
             cfg.addAnnotatedClass(DocumentoComprobatorio.class); // classes para serem mapeadas
             cfg.addAnnotatedClass(ItemHistorico.class); // classes para serem mapeadas
+            cfg.addAnnotatedClass(Aluno.class); // classes para serem mapeadas
            // cfg.addAnnotatedClass(Enderec.class); // classes para serem mapeadas
 
             factory = cfg.buildSessionFactory();// construindo uma fabrica de sessão

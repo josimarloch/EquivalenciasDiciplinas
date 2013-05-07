@@ -6,6 +6,7 @@ package Daos;
 
 import beans.Disciplina;
 import java.util.List;
+import org.hibernate.Query;
 
 /**
  *
@@ -20,6 +21,18 @@ public class DisciplinaDao extends DaoGenerics<Disciplina> {
         for(Disciplina d: diciplinas){
             persistir(d);
         }
+    }
+    public List<Disciplina> getPorIDCurso(String id){
+         List<Disciplina> lista = null;
+        if (id != null) {
+            session = getsession();
+            Query query = session.createQuery(
+                    "select d from Disciplina d where d.curso.id= " +id );
+                 //   "From disciplina where curso.id = " +id );
+            lista = query.list();
+            session.flush();
+        }
+        return lista;
     }
     
 }
