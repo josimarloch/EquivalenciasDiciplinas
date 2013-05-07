@@ -5,6 +5,8 @@
 package Daos;
 
 import beans.Professor;
+import java.util.List;
+import org.hibernate.Query;
 
 /**
  *
@@ -16,6 +18,18 @@ public class ProfessorDao extends DaoGenerics<Professor> {
         clazz = Professor.class;
     }
     
+    public Professor getPorEmail(String email){
+         Professor professor = null;
+        if (!email.equals("")) {
+            session = getsession();
+            Query select = session.createQuery(
+                    "From professor where email = '" +email+"'" );
+            professor = (Professor) select.uniqueResult();
+            session.flush();
+        }
+        return professor;
+        
+    }
     
     
 }

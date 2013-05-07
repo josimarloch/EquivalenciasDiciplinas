@@ -18,7 +18,7 @@ public class DaoGenerics<T> implements Dao<T> {
     Session session = null;
     protected Class clazz;
 
-    private Session getsession() {
+    protected Session getsession() {
         if (session == null) {
             session = HibernateConfiguration.getSessionFactory().openSession();
             return session;

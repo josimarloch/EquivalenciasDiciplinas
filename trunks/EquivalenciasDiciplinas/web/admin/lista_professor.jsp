@@ -20,7 +20,7 @@
             <tr>
                 <th>Nome</th>
                 <th>Email</th>
-                <th>Disciolina(s)</th>
+                <th>Disciplina(s)</th>
                 <th>#</th>
             </tr>
             <c:forEach items="${professors}" var="professor" varStatus="status">

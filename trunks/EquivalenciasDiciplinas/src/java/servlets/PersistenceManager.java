@@ -90,6 +90,9 @@ public class PersistenceManager extends HttpServlet {
             if (ok.equals("cadastra_professor")) {
                 String nome = request.getParameter("nome").trim();
                 String email = request.getParameter("email").trim();
+                 ProfessorDao pd = new ProfessorDao();
+                 if(pd.getPorEmail(email)!=null)
+                         
                 if (!nome.equals("") && !email.equals("")) {
                     new ProfessorDao().persistir(new Professor(nome, email));
                     response.sendRedirect("index.jsp");
@@ -104,15 +107,16 @@ public class PersistenceManager extends HttpServlet {
             } else if (ok.equals("cadastra_disciplina")) {
                 String nome = request.getParameter("nome").trim();
                 String curso = request.getParameter("curso_id").trim();
-                String Professor = request.getParameter("professor_id").trim();
+                String professor = request.getParameter("professor_id").trim();
                 if (!nome.equals("")) {
                     Curso c = new CursoDao().obterPorId(Integer.parseInt(curso));
                     Disciplina d = new Disciplina();
                     d.setNome(nome);
                     d.setCurso(c);
                     d.setEmenta(request.getParameter("ementa").trim());
-                    if (!Professor.equals("0")) {
-                        Professor p = new ProfessorDao().obterPorId(Integer.parseInt(Professor));
+                  
+                    if (!professor.equals("0")) {
+                        Professor p = new ProfessorDao().obterPorId(Integer.parseInt(professor));
                         d.setProfessor(p);
                     }
                    new DisciplinaDao().persistir(d);
