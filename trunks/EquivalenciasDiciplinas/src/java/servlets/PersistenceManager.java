@@ -5,8 +5,10 @@
 package servlets;
 
 import Daos.CursoDao;
+import Daos.DisciplinaDao;
 import Daos.ProfessorDao;
 import beans.Curso;
+import beans.Disciplina;
 import beans.Professor;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -101,8 +103,19 @@ public class PersistenceManager extends HttpServlet {
 
             } else if (ok.equals("cadastra_disciplina")) {
                 String nome = request.getParameter("nome").trim();
+                String curso = request.getParameter("curso_id").trim();
+                String Professor = request.getParameter("professor_id").trim();
                 if (!nome.equals("")) {
-                    new CursoDao().persistir(new Curso(nome));
+                    Curso c = new CursoDao().obterPorId(Integer.parseInt(curso));
+                    Disciplina d = new Disciplina();
+                    d.setNome(nome);
+                    d.setCurso(c);
+                    d.setEmenta(request.getParameter("ementa").trim());
+                    if (!Professor.equals("0")) {
+                        Professor p = new ProfessorDao().obterPorId(Integer.parseInt(Professor));
+                        d.setProfessor(p);
+                    }
+                   new DisciplinaDao().persistir(d);
                     response.sendRedirect("index.jsp");
                 }
             }

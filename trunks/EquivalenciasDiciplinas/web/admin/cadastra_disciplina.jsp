@@ -50,7 +50,7 @@
                                 Escolha o Professor            
                             </option>  
                         <c:forEach items="${professors}" var="professor" varStatus="status">
-                            <option value="  <c:out value="${cu.id}" />       ">
+                            <option value="  <c:out value="${professor.id}" />       ">
                                 <c:out value="${professor.email}" />               
                             </option>  
                         </c:forEach>
@@ -60,7 +60,7 @@
             <div class="control-group">
                 <label class="control-label" for="ementa" >Ementa da Disciplina</label>
                 <div class="controls">
-                    <textarea rows="3" name="ementa" id="ementa"></textarea>
+                    <textarea rows="4" name="ementa" id="ementa"></textarea>
                 </div>
             </div>
 

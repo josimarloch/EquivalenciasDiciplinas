@@ -97,13 +97,14 @@
                 <div class="span3">
                     <div class="well sidebar-nav">
                         <ul class="nav nav-list">
-                            <li class="nav-header">Menu</li>
-                            <li class="active"><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
+                            <li class="nav-collapse">Menu</li>
+                            <li class="nav-header">Cadastros</li>
+                            <li ><a href="#" onclick="abrirPag('cadastra_professor.jsp')">Cadastro de Professor</a></li>
                             <li ><a href="#" onclick="abrirPag('cadastra_curso.jsp')">Cadastro de Curso</a></li>
                             <li id="test2" ><a href="#"  onmousedown="ChangeClass(document.getElementById('test2'),'active');" onclick="abrirPag('cadastra_disciplina.jsp')">Cadastro de Disciplina</a></li>
                             <li id="test"><a href="#" onclick="ChangeClass(document.getElementById('test'),'active');" onblur="">Link</a></li>
-                            <li class="nav-header">Sidebar</li>
-                            <li><a href="#">Link</a></li>
+                            <li class="nav-header">Consultas</li>
+                            <li ><a href="#" onclick="abrirPag('lista_professor.jsp')">Todos os Professores</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>
                             <li><a href="#">Link</a></li>

@@ -40,6 +40,22 @@ public class Disciplina implements Serializable {
         this.nome = nome;
         this.professor = professor;
     }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public String getEmenta() {
+        return ementa;
+    }
+
+    public void setEmenta(String ementa) {
+        this.ementa = ementa;
+    }
    
 
    
