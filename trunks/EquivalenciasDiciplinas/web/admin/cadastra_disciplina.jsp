@@ -4,13 +4,15 @@
     Author     : josimar
 --%>
 
+<%@page import="Daos.ProfessorDao"%>
 <%@page import="Daos.CursoDao"%>
 <%@page import="java.util.List"%>
 <%@page import="beans.Curso"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% List<Curso> cursos = new CursoDao().listar();
-session.setAttribute("cursos",cursos);
+<% 
+    session.setAttribute("cursos", new CursoDao().listar());
+    session.setAttribute("professors", new ProfessorDao().listar());
 %>
 
 <!DOCTYPE html>
@@ -29,13 +31,27 @@ session.setAttribute("cursos",cursos);
                 </div>
             </div>
             <div class="control-group">
-                <label class="control-label" for="curso" >Nome</label>
+                <label class="control-label" for="curso" >Curso</label>
                 <div class="controls">
-                    <select id="curso">
+                    <select id="curso" name="curso_id">
                         <c:forEach items="${cursos}" var="curso" varStatus="status">
-                            <option>
-                            <c:out value="${status.count}" />               
-                            <c:out value="${curso.nome}" />               
+                            <option value="  <c:out value="${curso.id}" />       ">
+                                <c:out value="${curso.nome}" />               
+                            </option>  
+                        </c:forEach>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="professor" >Professor</label>
+                <div class="controls">
+                    <select id="professor" name="professor_id">
+                            <option value="0">
+                                Escolha o Professor            
+                            </option>  
+                        <c:forEach items="${professors}" var="professor" varStatus="status">
+                            <option value="  <c:out value="${cu.id}" />       ">
+                                <c:out value="${professor.email}" />               
                             </option>  
                         </c:forEach>
                     </select>
@@ -51,7 +67,7 @@ session.setAttribute("cursos",cursos);
 
             <div class="control-group">
                 <div class="controls">
-                    <input type="hidden" name="ok" value="cadastra_professor"/>
+                    <input type="hidden" name="ok" value="cadastra_disciplina"/>
                     <button type="submit" class="btn">Cadastrar</button>
                 </div>
             </div>

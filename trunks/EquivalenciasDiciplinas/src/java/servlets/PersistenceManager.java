@@ -43,13 +43,13 @@ public class PersistenceManager extends HttpServlet {
              */
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet PersistenceManager</title>");            
+            out.println("<title>Servlet PersistenceManager</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet PersistenceManager at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-        } finally {            
+        } finally {
             out.close();
         }
     }
@@ -82,21 +82,27 @@ public class PersistenceManager extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
+        // processRequest(request, response);
         String ok = request.getParameter("ok");
-        if(ok != null){
-            if(ok.equals("cadastra_professor")){
+        if (ok != null) {
+            if (ok.equals("cadastra_professor")) {
                 String nome = request.getParameter("nome").trim();
                 String email = request.getParameter("email").trim();
-                if(!nome.equals("") && !email.equals("")){
+                if (!nome.equals("") && !email.equals("")) {
                     new ProfessorDao().persistir(new Professor(nome, email));
                     response.sendRedirect("index.jsp");
                 }
-            }else
-            if(ok.equals("cadastra_curso")){
+            } else if (ok.equals("cadastra_curso")) {
                 String nome = request.getParameter("nome").trim();
-                if(!nome.equals("")){
-                   new CursoDao().persistir(new Curso(nome));
+                if (!nome.equals("")) {
+                    new CursoDao().persistir(new Curso(nome));
+                    response.sendRedirect("index.jsp");
+                }
+
+            } else if (ok.equals("cadastra_disciplina")) {
+                String nome = request.getParameter("nome").trim();
+                if (!nome.equals("")) {
+                    new CursoDao().persistir(new Curso(nome));
                     response.sendRedirect("index.jsp");
                 }
             }
