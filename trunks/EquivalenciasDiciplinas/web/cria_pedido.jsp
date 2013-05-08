@@ -25,6 +25,30 @@
         <dl>
             <dt>Ementa da disciplina de <c:out value="${disciplina.nome}" />. </dt>
             <dd><c:out value="${disciplina.ementa}" /></dd>
-        </Dl>
+        </dl>
+         <form class="form-horizontal" action="PersistenceManager" method="post" accept-charset="ISO-8859-1">
+            <h3>Cadastro de Disciplina</h3>
+            <div class="control-group">
+                <label class="control-label" for="Nome" >Nome</label>
+                <div class="controls">
+                    <input type="text" id="Nome" name="nome" placeholder="Nome">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="ementa" >Ementa da Disciplina Cursada</label>
+                <div class="controls">
+                    <textarea rows="4" name="ementa" id="ementa"></textarea>
+                </div>
+            </div>
+
+
+            <div class="control-group">
+                <div class="controls">
+                    <input type="hidden" name="ok" value="cadastra_disciplina"/>
+                    <button type="submit" class="btn">Cadastrar</button>
+                </div>
+            </div>
+        </form>
     </body>
 </html>
