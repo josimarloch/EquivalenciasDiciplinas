@@ -17,7 +17,7 @@ public class MainLDAP {
         
         LoginLDAP lo = new LoginLDAP();
         
-        Usuario user =  lo.logarNoLDAP("a1028340", "");
+        Usuario user =  lo.logarNoLDAP("a1265067", "");
         
         System.out.println(user.getEmail());
         

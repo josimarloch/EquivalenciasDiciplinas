@@ -6,6 +6,7 @@ package servlets;
 
 import Daos.AlunoDao;
 import beans.Aluno;
+import br.edu.utfpr.cm.saa.entidades.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import userLDAP.LoginLDAP;
 
 /**
  *
@@ -30,6 +32,8 @@ public class LoginManager extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    LoginLDAP ldap = new LoginLDAP();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -89,15 +93,15 @@ public class LoginManager extends HttpServlet {
         if (ok.equals("login")) {
             String login = request.getParameter("login").trim();
             String senha = request.getParameter("senha").trim();
-            if (login.contains("@")) {
-            } else if (login.substring(0, 1).equals("a")) {
-                HttpSession session = request.getSession();
-                Aluno aluno = new Aluno(login, senha);
-                session.setAttribute("aluno", aluno);
-                AlunoDao ad = new AlunoDao();
-              //(!ad.alunoExiste(login)) {
-                    ad.persistir(aluno);
-              //  }
+            if (ldap.logarNoLDAP(login, senha) != null) {
+                    HttpSession session = request.getSession();
+                    Usuario usuario = ldap.logarNoLDAP(login, senha);
+                    session.setAttribute("aluno", usuario);
+                    AlunoDao ad = new AlunoDao();
+                    
+                    //(!ad.alunoExiste(login)) {
+                   // ad.persistir(usuario);
+                    //  }               
             }
         }
         response.sendRedirect("index.jsp");

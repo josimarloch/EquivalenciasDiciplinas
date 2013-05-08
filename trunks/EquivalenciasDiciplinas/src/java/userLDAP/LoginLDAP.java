@@ -30,6 +30,7 @@ public class LoginLDAP {
             if (result) {
                 LDAPEntry entry = ldapManager.nextEntry();
                 String loginDN = entry.getDN();
+                System.out.println(entry.getAttributeSet());
                 if (ldapManager.login(loginDN, password)) {
                     
                     System.out.println("OK");
