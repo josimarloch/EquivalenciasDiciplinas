@@ -15,7 +15,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h3>Escolha o Cursos</h3>
+        <ul class="inline">
+            <li> Você está aqui: <a href="index.jsp">Inicio</a></li>
+            <li>/Escolha o curso</li>
+        </ul>
+        <h3>Escolha o Curso</h3>
         <ul>
             <c:forEach items="${cursos}" var="curso" varStatus="status">
                  

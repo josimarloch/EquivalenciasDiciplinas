@@ -22,7 +22,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form class="form-horizontal" action="PersistenceManager" method="post" accept-charset="UTF-8">
+        <form class="form-horizontal" action="PersistenceManager" method="post" accept-charset="ISO-8859-1">
             <h3>Cadastro de Disciplina</h3>
             <div class="control-group">
                 <label class="control-label" for="Nome" >Nome</label>

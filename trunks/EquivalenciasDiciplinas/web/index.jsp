@@ -65,7 +65,7 @@
                     <a class="brand" href="#">Equivalência de Disciplinas</a>
                     <div class="nav-collapse collapse">
                         <p class="navbar-text pull-right">
-                            Logged in as <a href="#" class="navbar-link">   <c:if test="${aluno!=null}"><c:out value="${aluno.ra}"/><a href="LoginManager?ok=logout"> Logout</a> </c:if>
+                            Logged in as <a href="#" class="navbar-link">   <c:if test="${aluno!=null}"><c:out value="${aluno.ra}"/><a href="LoginManager?ok=logout" title="Sair" > Logout</a> </c:if>
                             </p>
                             <ul class="nav">
                                 <li class="active"><a href="#">Home</a></li>
@@ -101,51 +101,6 @@
                                 <li><a href="#">Link</a></li>
                             </ul>
                         </c:if>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

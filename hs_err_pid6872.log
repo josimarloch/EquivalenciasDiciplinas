@@ -1,0 +1,136 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 65536 bytes for offset table expansion
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (blockOffsetTable.cpp:79), pid=6872, tid=5140
+#
+# JRE version: 7.0_13-b20
+# Java VM: Java HotSpot(TM) Client VM (23.7-b01 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0035c000):  JavaThread "Unknown thread" [_thread_in_vm, id=5140, stack(0x02000000,0x02050000)]
+
+Stack: [0x02000000,0x02050000],  sp=0x0204f584,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x16f261]
+V  [jvm.dll+0x169535]
+V  [jvm.dll+0x5ee00]
+V  [jvm.dll+0x5f383]
+V  [jvm.dll+0x6c8b6]
+V  [jvm.dll+0x62dd6]
+V  [jvm.dll+0x6f10d]
+V  [jvm.dll+0x6ccbd]
+V  [jvm.dll+0x6ba2d]
+V  [jvm.dll+0x75ba7]
+V  [jvm.dll+0x1290a4]
+V  [jvm.dll+0x149b3a]
+V  [jvm.dll+0xa98df]
+C  [java.exe+0x13bd]
+C  [java.exe+0x1e2f]
+C  [java.exe+0xa591]
+C  [java.exe+0xa61b]
+C  [kernel32.dll+0x133aa]
+C  [ntdll.dll+0x39ef2]
+C  [ntdll.dll+0x39ec5]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0035c000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=5140, stack(0x02000000,0x02050000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000f0000 - 0x0011f000 	c:\program files (x86)\smartgithg 4.5\jre\bin\java.exe
+0x77270000 - 0x773f0000 	C:\Windows\SysWOW64\ntdll.dll
+0x75500000 - 0x75610000 	C:\Windows\syswow64\kernel32.dll
+0x75390000 - 0x753d7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x757d0000 - 0x75870000 	C:\Windows\syswow64\ADVAPI32.dll
+0x74dd0000 - 0x74e7c000 	C:\Windows\syswow64\msvcrt.dll
+0x75ca0000 - 0x75cb9000 	C:\Windows\SysWOW64\sechost.dll
+0x74a30000 - 0x74b20000 	C:\Windows\syswow64\RPCRT4.dll
+0x74950000 - 0x749b0000 	C:\Windows\syswow64\SspiCli.dll
+0x74940000 - 0x7494c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x74b50000 - 0x74c50000 	C:\Windows\syswow64\USER32.dll
+0x752d0000 - 0x75360000 	C:\Windows\syswow64\GDI32.dll
+0x753e0000 - 0x753ea000 	C:\Windows\syswow64\LPK.dll
+0x75cc0000 - 0x75d5d000 	C:\Windows\syswow64\USP10.dll
+0x71180000 - 0x7131e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x749b0000 - 0x74a07000 	C:\Windows\syswow64\SHLWAPI.dll
+0x75aa0000 - 0x75b00000 	C:\Windows\system32\IMM32.DLL
+0x74c50000 - 0x74d1c000 	C:\Windows\syswow64\MSCTF.dll
+0x5cc30000 - 0x5ccee000 	c:\program files (x86)\smartgithg 4.5\jre\bin\msvcr100.dll
+0x69650000 - 0x6999d000 	c:\program files (x86)\smartgithg 4.5\jre\bin\client\jvm.dll
+0x73040000 - 0x73047000 	C:\Windows\system32\WSOCK32.dll
+0x75b00000 - 0x75b35000 	C:\Windows\syswow64\WS2_32.dll
+0x75140000 - 0x75146000 	C:\Windows\syswow64\NSI.dll
+0x722f0000 - 0x72322000 	C:\Windows\system32\WINMM.dll
+0x74d30000 - 0x74d35000 	C:\Windows\syswow64\PSAPI.DLL
+0x6c850000 - 0x6c85c000 	c:\program files (x86)\smartgithg 4.5\jre\bin\verify.dll
+0x6c830000 - 0x6c850000 	c:\program files (x86)\smartgithg 4.5\jre\bin\java.dll
+0x69f90000 - 0x69fa3000 	c:\program files (x86)\smartgithg 4.5\jre\bin\zip.dll
+0x70e50000 - 0x70f3b000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dsmartgit.remoteId=https://github.com/josimarloch/EquivalenciasDiciplinas.git -Dsmartgit.tempDir=C:\Users\josimar\AppData\Local\Temp\smartgit4619411870524027467tmp -Dsmartgit.id=6775670411205475925 -Dsmartgit.port=4332 -Dsmartgit.logging=false -Djava.net.preferIPv4Stack=true 
+java_command: com.syntevo.smartgit.transport.askpass.SgAskPasswordMain Username for 'https://github.com': 
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.7.0_03
+CLASSPATH=.;JAVA_HOME
+PATH=C:\Program Files (x86)\SmartGitHg 4.5\git/libexec/git-core;C:\Program Files (x86)\SmartGitHg 4.5\git\bin;C:\Program Files (x86)\PC Connectivity Solution\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\VDownloader;C:\Program Files (x86)\VDownloader;C:\Program Files\Java\jdk1.7.0_03\bin;c:\program files (x86)\smartgithg 4.5\jre\bin
+USERNAME=josimar
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 18 Model 1 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 18 model 1 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, popcnt, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 3643504k(741368k free), swap 5689644k(2408k free)
+
+vm_info: Java HotSpot(TM) Client VM (23.7-b01) for windows-x86 JRE (1.7.0_13-b20), built on Jan 30 2013 10:03:58 by "java_re" with unknown MS VC++:1600
+
+time: Tue May 07 17:48:12 2013
+elapsed time: 0 seconds
+
