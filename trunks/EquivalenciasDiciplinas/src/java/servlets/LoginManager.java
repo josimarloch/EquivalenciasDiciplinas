@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import userLDAP.LoginLDAP;
+import userLDAP.UserLDAP;
 
 /**
  *
@@ -93,15 +94,19 @@ public class LoginManager extends HttpServlet {
         if (ok.equals("login")) {
             String login = request.getParameter("login").trim();
             String senha = request.getParameter("senha").trim();
-            if (ldap.logarNoLDAP(login, senha) != null) {
                     HttpSession session = request.getSession();
+            if (ldap.logarNoLDAP(login, senha) != null) {
                     Usuario usuario = ldap.logarNoLDAP(login, senha);
                     session.setAttribute("aluno", usuario);
-                    AlunoDao ad = new AlunoDao();
                     
                     //(!ad.alunoExiste(login)) {
                    // ad.persistir(usuario);
                     //  }               
+            }else{
+                    Usuario u = new UserLDAP();
+                    u.setNome(login);
+                    session.setAttribute("aluno", u);
+                
             }
         }
         response.sendRedirect("index.jsp");

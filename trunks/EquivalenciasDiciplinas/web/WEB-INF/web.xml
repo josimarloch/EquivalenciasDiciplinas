@@ -17,6 +17,14 @@
         <servlet-name>LoginManager</servlet-name>
         <url-pattern>/LoginManager</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>PersistenceManager</servlet-name>
+        <servlet-class>servlets.PersistenceManager</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersistenceManager</servlet-name>
+        <url-pattern>/admin/PersistenceManager</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

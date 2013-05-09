@@ -35,7 +35,7 @@ public class HibernateConfiguration {
             cfg.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
             cfg.setProperty("hibernate.connection.username", userName);
             cfg.setProperty("hibernate.connection.password", password);
-            cfg.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/"+dataBase);
+            cfg.setProperty("hibernate.connection.url", "jdbc:mysql://ec2-23-21-211-172.compute-1.amazonaws.com:3306/"+dataBase);
             cfg.setProperty("hibernate.show_sql", "true");
             cfg.setProperty("hibernate.format_sql", "true");
             cfg.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");

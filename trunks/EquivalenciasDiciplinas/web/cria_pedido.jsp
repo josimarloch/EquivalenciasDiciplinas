@@ -26,28 +26,37 @@
             <dt>Ementa da disciplina de <c:out value="${disciplina.nome}" />. </dt>
             <dd><c:out value="${disciplina.ementa}" /></dd>
         </dl>
-         <form class="form-horizontal" action="PersistenceManager" method="post" accept-charset="ISO-8859-1">
-            <h3>Cadastro de Disciplina</h3>
-            <div class="control-group">
-                <label class="control-label" for="Nome" >Nome</label>
-                <div class="controls">
-                    <input type="text" id="Nome" name="nome" placeholder="Nome">
-                </div>
-            </div>
-            
+        <br/>
+         <dl>
+            <dt>Ementa da disciplina cursada</dt>
+            <dd>Neste campo voce deve descrever a instutuição, nome da disciplina cursada carga horária e sua ementa.</dd>
+        </dl>
+        <form class="form-horizontal" action="PersistenceManager" method="post" accept-charset="ISO-8859-1">
             <div class="control-group">
                 <label class="control-label" for="ementa" >Ementa da Disciplina Cursada</label>
                 <div class="controls">
-                    <textarea rows="4" name="ementa" id="ementa"></textarea>
+                    <textarea rows="4" cols="60" name="ementa" id="ementa"></textarea>
+                </div>
+            </div>
+            <dl>
+            <dt>Documento Comprobatório.</dt>
+            <dd>Aqui você deve anexar um arquivo pdf que comprove a ementa da disciplina cursada.</dd>
+        </dl>
+            <div class="control-group">
+                <label class="control-label" for="ementa" >Documento Copmrobatório</label>
+                <div class="controls">
+                    <input type="file" name="documento" id="documento" />
+
                 </div>
             </div>
 
-
+<br/>
             <div class="control-group">
-                <div class="controls">
                     <input type="hidden" name="ok" value="cadastra_disciplina"/>
-                    <button type="submit" class="btn">Cadastrar</button>
-                </div>
+                    <button type="submit" class="btn btn-primary">Submeter Pedido</button>
+                    <button type="reset" class="btn btn-warning">Limpar Campos</button>
+                    <a href="index.jsp"> <button class="btn btn-danger">Cancelar e voltar para inicio</button>
+                    </a> 
             </div>
         </form>
     </body>
