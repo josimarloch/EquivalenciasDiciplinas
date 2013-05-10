@@ -126,9 +126,6 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-         <c:if test="${aluno==null}">
-            <script>abrirPag('login.jsp')</script>
-        </c:if>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap-transition.js"></script>
         <script src="js/bootstrap-alert.js"></script>
@@ -144,6 +141,9 @@
         <script src="js/bootstrap-typeahead.js"></script>
         <script src="js/ajax.js"></script>  
         <script src="js/instrucao.js"></script> 
+         <c:if test="${aluno==null}">
+            <script>abrirPag('login.jsp')</script>
+        </c:if>
 
 
 
