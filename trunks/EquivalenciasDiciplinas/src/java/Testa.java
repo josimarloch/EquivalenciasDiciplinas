@@ -3,6 +3,7 @@ import Daos.DisciplinaDao;
 import Daos.ProfessorDao;
 import beans.Disciplina;
 import beans.Professor;
+import controler.DisciplinaIterator;
 import java.util.Calendar;
 import java.util.List;
 
@@ -31,7 +32,11 @@ public class Testa {
 //        List<Disciplina> listar = new DisciplinaDao().listar();
 //        
 //        System.out.println(listar);
-        new DisciplinaDao().getPorIDCurso("1");
+        //new DisciplinaDao().getPorIDCurso("1");
+        DisciplinaIterator d = new DisciplinaIterator();
+        while(d.hasNext()){
+            System.out.println(d.next().getNome());
+        }
     }
     
 }

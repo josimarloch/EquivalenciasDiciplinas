@@ -52,12 +52,6 @@
     </head>
 
     <body>
-        <c:if test="${aluno==null}">
-            <script>abrirPag('login.jsp')</script>
-        </c:if>
-
-
-            
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container-fluid">
@@ -132,6 +126,9 @@
         <!-- Le javascript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
+         <c:if test="${aluno==null}">
+            <script>abrirPag('login.jsp')</script>
+        </c:if>
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap-transition.js"></script>
         <script src="js/bootstrap-alert.js"></script>
