@@ -23,7 +23,7 @@ public class ProfessorDao extends DaoGenerics<Professor> {
         if (!email.equals("")) {
             session = getsession();
             Query select = session.createQuery(
-                    "From professor where email = '" +email+"'" );
+                    "From " + clazz.getSimpleName() + " where email = '" +email+"'" );
             professor = (Professor) select.uniqueResult();
             session.flush();
         }

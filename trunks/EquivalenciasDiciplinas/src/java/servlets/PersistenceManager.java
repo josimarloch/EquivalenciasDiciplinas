@@ -91,7 +91,7 @@ public class PersistenceManager extends HttpServlet {
                 String nome = request.getParameter("nome").trim();
                 String email = request.getParameter("email").trim();
                  ProfessorDao pd = new ProfessorDao();
-                 if(pd.getPorEmail(email)!=null)
+                // if(pd.getPorEmail(email)!=null)
                          
                 if (!nome.equals("") && !email.equals("")) {
                     new ProfessorDao().persistir(new Professor(nome, email));
