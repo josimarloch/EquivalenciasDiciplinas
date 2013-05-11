@@ -7,7 +7,7 @@
 <%@page import="Daos.CursoDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%session.setAttribute("cursos", new CursoDao().listar());%>
+<jsp:useBean id="cursos" class="Daos.CursoDao" scope="request" /> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,7 +21,7 @@
         </ul>
         <h3>Escolha o Curso</h3>
         <ul>
-            <c:forEach items="${cursos}" var="curso" varStatus="status">
+            <c:forEach items="${cursos.listar()}" var="curso" varStatus="status">
                  
                  <li ><a href="#" onclick="abrirPag('lista_diciplina.jsp?curso_id=<c:out value="${curso.id}" />')"><c:out value="${curso.nome}" /></a></li>
                             
